@@ -1,0 +1,7 @@
+FROM nvidia/cuda:9.1-cudnn7-devel-ubuntu16.04
+
+{% include "python3" %}
+
+RUN pip --no-cache-dir install numpy sklearn scipy && rm -rf /tmp/* /var/tmp/*
+
+{% include "opencv" %}
